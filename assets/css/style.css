@@ -1,0 +1,502 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết
+ */
+
+/*
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng 
+ */
+ /* giải quyết vấn đề thẻ div không ôm được thẻ con bằng float: left; */
+.clear {
+    clear: both;
+}
+
+#main {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+#header {
+    height: 46.5px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+/* Xóa CSS của đầu dòng list */
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+    position: relative;
+}
+/* CSS cho phần header */
+#nav > li > a {
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 46.5px;
+    padding: 0px 24px;
+    font-weight: 500;
+}
+/* CSS cho phần header được hover */ 
+#nav .subnav li:hover,  
+#nav > li:hover > a {
+    background-color: gray;
+    color: black;
+}
+
+/* CSS cho khối div có class = subnav */
+#nav .subnav {
+    min-width: 180px;
+    display: none; 
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+/* hover vào li thì sẽ áp dụng thuộc tính vào subnav */
+#nav li:hover .subnav {
+    display: block;
+}
+/* CSS cho thẻ a  */
+#nav .subnav a {
+    line-height: 38.5px;
+    color: black;
+    padding: 0 16px;
+}
+
+#nav .subnav li {
+    display: block;
+}
+
+#nav .down-icon {
+    font-size: 12px;
+    margin-left: 2px;
+} 
+/* CSS cho nút tìm kiếm */
+#header .mobile-menu,
+#header .search-button {
+    color: white;
+    float: right;
+    line-height: 46.5px;
+    padding: 0px 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu:hover .menu-btn {
+    color: black;
+}
+
+#header .mobile-menu:hover {
+    background-color: gray;
+}
+
+/* CSS cho hover của nút tìm kiếm */
+#header .search-button:hover {
+    background-color: red;
+    cursor: pointer;
+}
+/* CSS ảnh của slider */
+#slider {
+    position: relative;
+    scroll-margin-top: 46.5px;
+    margin-top: 46.5px;
+    padding-top: 50%; /*50% sẽ làm cho kích thước chiều cao bằng 50% chiều rộng*/
+    background: url(../img/ny.jpg) top center / cover no-repeat;
+}
+/* CSS chữ trên ảnh của slider */
+#slider .text-content {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    color: white;
+    text-align: center;
+    padding: 32px 16px;
+}
+
+#slider .text-content .heading {
+    margin: 10px 0px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#slider .text-content .content {
+    margin: 15px 0px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+/* CSS cho khung của phần content */
+#content .content-section {
+    padding: 64px 16px;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* CSS cho tiêu đề của content */
+#content .content-section .section-heading {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 30px;
+    letter-spacing: 4px;
+    line-height: 1.5;
+}
+/* CSS cho phần slogan của content */
+#content .content-section .section-p {
+    font-style: italic;
+    margin: 15px 0px;
+    line-height: 1.5;
+    color: gray;
+}
+/* CSS cho phân text của Band */
+#content .content-section .section-text {
+    margin: 15px 0px;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+#content .member-lists {
+    padding: 32px 0px;
+}
+
+.row {
+    /* margin-top: 15px; */
+    /* margin-bottom: 15px; */
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col2 {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 50%;
+}
+
+.col3 {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 33.33333%;
+}
+
+.col-full-d{
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+} 
+
+#content .member-item .member-img {
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+#content #tour {
+    background-color: black;
+    color: white;
+}
+
+#content .ticket-lists {
+    list-style-type: none;
+    text-align: left;
+    color: gray;
+    background-color: white;
+    line-height: 1.5;
+}
+
+#content .ticket-lists li {
+    width: 100%;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ticket-lists .sold-out {
+    margin-left: 16px;
+    padding: 2px 8px;
+    background-color: red;
+    color: white;
+}
+
+.ticket-lists .quantity {
+    float: right;
+    border-radius: 50%;
+    background-color: black;
+    padding: 0px 8px;
+    color: white;
+    text-align: center;
+    margin-right: 12px;
+}
+
+.tour-div {
+    padding: 32px 8px;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+#tour .tour-places {
+    padding: 0px 8px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.5;
+}
+
+#tour .tour-places .place-info {
+    background-color: white;
+    color: black;
+    text-align: left;
+    padding: 0px 16px;
+}
+
+#tour .tour-places .name {
+    font-weight: bolder;
+    padding-top: 15px;
+}
+
+#tour .tour-places .time {
+    color: gray;
+    font-weight: 400;
+}
+
+#tour .tour-places .name,
+#tour .tour-places .time,
+#tour .tour-places .more
+ {
+    margin: 15px 0px;
+}
+
+#tour .tour-places .buy-ticket-btn {
+    margin: 0px 0px 16px;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+}
+
+#tour .tour-places .buy-ticket-btn:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal {
+    display: none;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+}
+
+.modal-container {
+    background-color: white;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 450px;
+    position: relative;
+    animation: modalOpenAnimation ease 0.5s;
+}
+
+.modal-container .modal-close-btn {
+    position: absolute;
+    right: 0;
+    /* font-size: 24px; */
+    padding: 8px 16px;
+    color: white;
+    line-height: 1.5;
+}
+
+.modal-container .modal-close-btn:hover {
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer;
+}
+
+.modal-header {
+    background-color: #009688;
+    color: white;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.modal-header .modal-heading-text {
+    margin-left: 8px;
+}
+
+.modal-body {
+    padding: 0.15px 16px;
+}
+
+.modal-body .modal-label {
+    display: block;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.modal-body .modal-input {
+    width: 100%;
+    height: 40px;
+}
+
+.modal-body #pay-ticket {
+    width: 100%;
+    height: 55px;
+    margin: 16px 0px;
+    padding: 16px;
+    background-color: #009688;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;  
+    border: none;
+}
+
+.modal-footer .modal-help{
+    position: absolute;
+    right: 0;
+    padding-right: 16px;
+
+}
+
+#contact .contact-content {
+    margin-top: 48px;
+}
+
+#contact .contact-detail {
+    text-align: left;
+    margin-bottom: 100px;
+    font-size: 18px;
+}
+
+.contact-detail {
+    font-size: 18px;
+}
+
+.contact-detail .contact-icon {
+    padding-right: 16px;
+    line-height: 1.5;
+}
+
+.contact-form{
+    font-size: 15px;
+    padding-left: 8px;
+}
+
+.form-control {
+    height: 40.5px;
+    width: 100%;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+}
+
+.hover:hover{
+    cursor: pointer;
+    background-color: gray;
+    color: black;
+}
+
+.form-submit {
+    margin-top: 8px;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    float: right;
+    border: none;
+}
+
+.contact-input{
+    padding: 0px 8px;
+}
+
+.map-section img {  
+    width: 100%;
+}
+
+#footer {
+    text-align: center;
+    padding: 64px 16px;
+    
+}
+
+.copyright a {
+    opacity: 0.8;
+    margin-top: 24px;
+    padding: 8px 0;
+    display: inline-block;
+}
+
+#footer .social-media a {
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0 8px;
+}
+
+#footer .social-media i:hover{
+    opacity: 0.6;
+}
+
+@keyframes modalOpenAnimation {
+    from {
+        opacity: 0.8;
+       transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
